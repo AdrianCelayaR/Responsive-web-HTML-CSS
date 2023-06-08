@@ -1,0 +1,341 @@
+*{
+    /* Hace que los elementos no incrementen mas alla de un
+       tamanio que le indiquemos */
+    box-sizing: border-box; 
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{ font-size: 3.5em;}
+h2{ font-size: 2.7em;}
+h3{ font-size: 2em;}
+p{ font-size: 1.25em;}
+ul{list-style: none;}
+li{ font-size: 1.25em;}
+
+button{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 2px solid rgba(0,0,0,0,3);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0,5);
+    color: rgb(27, 26, 27);
+    background-color: blanchedalmond;
+}
+
+.color-palabras{
+    color: aqua;
+}
+
+button:hover{
+    background-color: blanchedalmond;
+}
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+header{
+    background-color: rgb(245, 245, 245);
+}
+
+header .logo{
+    margin: 0;
+    padding: 25px 30px;
+    font-weight: bold;
+    color: rgb(27, 26, 27);
+    font-size: 1.6em;
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(27, 26, 27);
+}
+
+header a:hover{
+    color: rgb(139, 79, 5);
+}
+
+#hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 90vh;
+    color: blanchedalmond;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("media/code.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#soy-Adrian .container{
+    text-align: center;
+    padding: 200px 12px;
+}
+
+#mi-experiencia{
+    background-color: rgb(27, 26, 27);
+    color: blanchedalmond;
+    text-align: center;
+}
+
+#mi-experiencia h2{
+    margin-top: 0;
+    font-size: 3em;
+}
+
+#mi-experiencia .container{
+    padding: 120px 15px;
+}
+
+#mi-experiencia p{
+    display: none;
+}
+
+#mi-experiencia .carta{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 50px;
+    margin: 12px;
+    border-radius: 15px;
+}
+
+.carta:first-child{
+    color: blanchedalmond;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("media/e-commerce.jpg");
+}
+
+.carta:nth-child(2){
+    color: blanchedalmond;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("media/cotizador.png");
+}
+
+.carta:nth-child(3){
+    color: blanchedalmond;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("media/responsive.jpg");
+}
+
+#caracteristicas .container{
+    padding: 200px 12px;
+}
+
+#caracteristicas li{
+    margin: 15px;
+    font-weight: bold;
+}
+
+#linkedin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 90vh;
+    color: blanchedalmond;
+    background-color: rgb(30, 30, 30);
+}
+
+#linkedin h2{
+    /* Mantiene el elemento en un detemrinado size ajustable
+    a la pantalla */
+    font-size: 9vw; 
+}
+
+#linkedin button{
+    font-size: 5vw;
+}
+
+footer{
+    background-color: blanchedalmond;
+}
+
+footer p{
+    margin: 0;
+    color: rgb(30, 30, 30);
+    padding: 10px;
+}
+
+footer .container{
+    height: 150px;
+    display: flex;
+    align-items: flex-end;
+}
+
+@media (min-width: 720px){
+    header{
+        /* Las dos lineas de abajo son para mantener el header
+        en la pantalla, para que puedas bajar y aun siga. */
+        position: fixed;
+        width: 100%;
+    }
+
+
+    header .container{
+        flex-direction: row;
+        /* Separar los elementos, que unos vaya a una esquina y 
+        los otros a la otra */
+        justify-content: space-between;
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 15px;
+    }
+
+    #soy-Adrian .container{
+        display: flex;
+        justify-content: center;
+    }
+
+    #soy-Adrian .texto{
+        width: 50%;
+        text-align: initial;
+        padding: 0px 30px;
+        /* Para que el texto no este tan estirado */
+        /*
+        max-width: 750px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+         */
+    }
+
+    #soy-Adrian h2{
+        margin-top: 0px;
+    }
+
+    #soy-Adrian .img-container{
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("media/adrian.jpeg");
+        background-size: cover;
+        background-position: center center;
+        height: 500px;
+        width: 50%;
+    }
+
+    #mi-experiencia .programas{
+        display: flex;
+        justify-content: center;
+    }
+
+    #mi-experiencia p{
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    #mi-experiencia h3{
+        margin-top: 0px;
+    }
+
+    #mi-experiencia .carta{
+        padding: 30px;
+    }
+
+    #caracteristicas .container{
+        display: flex;
+        justify-content: center;
+    }
+
+    #caracteristicas ul{
+        margin-left: 100px;
+    }
+
+    #caracteristicas .texto{
+        width: 50%;
+        text-align: initial;
+        padding: 0px 30px;
+        
+        /* Para que el texto no este tan estirado */
+        /*
+        max-width: 750px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+         */
+    }
+
+    #caracteristicas .img-container{
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("media/caract.jpeg");
+        background-size: cover;
+        background-position: center center;
+        height: 500px;
+        width: 50%;
+    }
+
+    #linkedin h2{
+        /* Mantiene el elemento en un detemrinado size ajustable
+        a la pantalla */
+        font-size: 5em; 
+    }
+    
+    #linkedin button{
+        font-size: 2em;
+    }
+
+    footer .container{
+        justify-content: flex-end;
+    }
+
+}
